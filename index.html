@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Point Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Kids Point Tracker! 🌟</h1>
+        <div class="kid-tracker">
+            <div class="kid-card" id="kts-card">
+                <h2>KTS</h2>
+                <p class="points" id="kts-points">0</p>
+                <div class="buttons">
+                    <button class="add-btn" data-kid="kts" data-points="1">+1 Point</button>
+                    <button class="add-btn" data-kid="kts" data-points="5">+5 Points</button>
+                    <button class="add-btn" data-kid="kts" data-points="10">+10 Points</button>
+                    <button class="subtract-btn" data-kid="kts" data-points="1">-1 Point</button>
+                </div>
+                <div class="prize-message" id="kts-prize"></div>
+            </div>
+
+            <div class="kid-card" id="kes-card">
+                <h2>KES</h2>
+                <p class="points" id="kes-points">0</p>
+                <div class="buttons">
+                    <button class="add-btn" data-kid="kes" data-points="1">+1 Point</button>
+                    <button class="add-btn" data-kid="kes" data-points="5">+5 Points</button>
+                    <button class="add-btn" data-kid="kes" data-points="10">+10 Points</button>
+                    <button class="subtract-btn" data-kid="kes" data-points="1">-1 Point</button>
+                </div>
+                <div class="prize-message" id="kes-prize"></div>
+            </div>
+        </div>
+        <button id="reset-all">Reset All Points</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

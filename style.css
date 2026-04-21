@@ -1,0 +1,146 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    color: #d147a3;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.kid-tracker {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.kid-card {
+    background: linear-gradient(to bottom right, #ffebee, #ffcdd2);
+    border: 5px solid #ef5350;
+    border-radius: 15px;
+    padding: 25px;
+    width: 350px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kid-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #e53935;
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.points {
+    font-size: 4em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 20px 0;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+.buttons button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+.buttons .subtract-btn {
+    background-color: #f44336;
+}
+
+.buttons .subtract-btn:hover {
+    background-color: #d32f2f;
+}
+
+.prize-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFC107;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#reset-all {
+    background-color: #607D8B;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#reset-all:hover {
+    background-color: #455A64;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Confetti animation */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #ffeb3b; /* Yellow */
+    animation: confetti-fall 3s ease-out forwards;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
